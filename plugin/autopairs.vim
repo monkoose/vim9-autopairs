@@ -78,6 +78,11 @@ def InsertPair(char: string): string
     return ClosePair(char)
   endif
 
+  # just jump over the char if it is the same as the inserted
+  if char == char_after
+    return right_key
+  endif
+
   if SkipInsertPair(char)
     return char
   else
